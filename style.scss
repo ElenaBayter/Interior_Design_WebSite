@@ -1,5 +1,6 @@
 @import 'vars';
 @import 'mixins';
+@import 'blog';
 
 * {
     margin: 0;
@@ -237,6 +238,8 @@ a{
     &__img{
         margin-bottom: 21px;
         max-width: 26vw;
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
     }
     &__title{
         color: #292F36;
@@ -245,6 +248,7 @@ a{
         font-weight: 400;
         line-height: 125%; 
         letter-spacing: 0.5px;
+        width: 24vw;
     }
     &__bottom{
         @include flex_between;
@@ -258,7 +262,7 @@ a{
                 text-transform: capitalize;
             }
     }
-    padding-bottom: 96px;
+
 }
 .blogcard:hover{
     border-radius: 62px;
@@ -272,6 +276,8 @@ a{
 .footer{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-top: 96px;
+    padding-bottom: 70px;
     &__logo{
         &_pic{
             width: 177px;
