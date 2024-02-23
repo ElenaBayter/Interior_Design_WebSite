@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header center">
+        <div class="header__left">
+            <a href="./index.html"><img class="logo" src="./img/LogoMain.png" alt="logo"></a>
+        </div>
+        <div class="header__right">
+            <nav class="menubar">
+                <a class="menubar__icon" href="./index.html">Home</a>
+                <a class="menubar__icon" href="#">Progect</a>
+                <a class="menubar__icon" href="#">Blog</a>
+            </nav>
+        </div>
+    </div>
+    <section class="details-banner"></section>
+    <section id="root" class="contentbox center">
+        <div class="content">
+            <h2 class="content__title">Let’s Get Solution for Building
+                Construction Work</h2>
+            <img class="content__img" src="./img/content1.png" alt="kitchen photo">
+            <div class="content__date">
+                <p class="content__date_text"></p>
+                <div class="content__breadcrumps">
+                    <a class="content__date_text" href="#">Interior / </a><a class="content__date_text" href="#">Home /</a><a class="content__date_text"  href="#"> Decore</a>
+                </div>
+            </div>
+            <p class="content__desc">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.</p>
+                
+            <p class="content__desc">Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary.</p>
+            <div class="quotes">
+                <img src="./img/quotes.png" alt="quotes">
+                <p class="quotes__desc">The details are not the details. <br> They make the design.</p>
+            </div>
+            <h2 class="content__title">Design sprints are great</h2>
+            <p class="content__desc">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+            <ol>
+                <li class="list-item"><p class="content__desc">Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p></li>
+                <li class="list-item"><p class="content__desc">Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p></li>
+                <li class="list-item"><p class="content__desc">Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p></li>
+            </ol>
+            <img class="content__img" src="./img/content2.png" alt="content photo">
+            <p class="content__desc">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
+            <div id="root" class="blog__content">
+            <div v-for="article in filteredArticles" :key="article.id">
+                <div class="blogcard">
+                    <img class="blogcard__img" :src='article.src' alt="article">
+                    <h4 class="blogcard__title">{{ article.title }}</h4>
+                    <div class="blogcard__bottom">
+                        <p class="blogcard__bottom_date">{{article.date}} </p>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
+                            <circle class="link" cx="26" cy="26.267" r="26" fill="#F4F0EC"/>
+                            <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg></a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div  class="tegs">
+            <h4 class="tegs__title">Tags</h4>
+            <button class="tegs__item" v-for="tag in tags" :key="tag" @click="addTagToFilter(tag)" href="">{{ tag }}</button>
+        </div>
+    </section> 
+    <footer class="footer center">
+        <div class="footer__logo">
+            <a href="./index.html"><img class="footer__logo_pic" src="./img/LogoMain.png" alt="logo"></a>
+            <p class="footer__logo_desc">It is a long established fact that a reader will be distracted lookings.</p>
+            <div class="footer__links">
+                <a href="#"><img class="footer__links_item" src="./img/twiter.png" alt="twitter"></a>
+                <a href="#"><img class="footer__links_item" src="./img/linkdIn.png" alt="LinkdIn"></a>
+            </div>
+        </div>
+        <div class="footer__pages">
+            <h4 class="footer__pages_title">Pages</h4>
+            <a class="footer__pages_page" href="./index.html">Home</a>
+            <a class="footer__pages_page" href="#">Project</a>
+            <a class="footer__pages_page" href="#">Blog</a>
+        </div>
+        <div class="footer__contacts">
+            <h4 class="footer__contacts_title">Contacts</h4>
+            <p class="footer__contacts_address">55 East Birchwood Ave. Brooklyn, New York 11201 </p>
+            <a class="footer__contacts_desc" href="mailto:contact@interno.com">contact@interno.com</a>
+            <a class="footer__contacts_desc" href="tel:(123) 456 - 7890">(123) 456 - 7890</a>
+        </div>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="date.js"></script>
+    <script>
+        new Vue({
+            el: '#root',
+            data: {
+                tags: ['Kitchen', 'Bedroom', 'Building', 'architecture', 'Kitchen planning', 'Bedroom'],
+                articles: [
+                    {id: 1, title: 'Let’s Get Solution For Building Construction Work', src: "./img/ArticlesNews1.png", date: '26 December,2022', tags: ['Bedroom', 'Building']},
+                    {id: 2, title: 'Low Cost Latest Invented Interior Designing Ideas', src: "./img/ArticlesNews2.png", date: '22 December,2022', tags: ['Building', 'architecture']},
+                    {id: 3, title: 'Best For Any Office & Business Interior Solution', src: "./img/ArticlesNews3.png", date: '25 December,2022', tags: ['Kitchen', 'Kitchen planning']},
+                    {id: 4, title: 'Let’s Get Solution For Building Construction Work', src: "./img/ArticlesNews4.png", date: '26 December,2022', tags: ['Building', 'Bedroom']},
+                    {id: 5, title: 'Low Cost Latest Invented Interior Designing Ideas', src: "./img/ArticlesNews5.png", date: '22 December,2022', tags: ['Bedroom', 'architecture']},
+                    {id: 6, title: 'Best For Any Office & Business Interior Solution', src: "./img/ArticlesNews6.png", date: '25 December,2022', tags: ['Kitchen planning', 'architecture']}
+                ],
+                selectedTags: [],
+            },
+            methods: {
+                addTagToFilter(tag) {
+                    if (!this.selectedTags.includes(tag)) {
+                        this.selectedTags.push(tag);
+                    } else {
+                        this.selectedTags = this.selectedTags.filter(t => t !== tag);
+                    }
+                }
+            },  
+            computed: {
+                filteredArticles() {
+                    return this.articles.filter(article =>
+                        article.tags.some(tag => this.selectedTags.includes(tag))
+                    );
+                }
+            }
+        });
+
+    </script>
+</body>
+</html>
