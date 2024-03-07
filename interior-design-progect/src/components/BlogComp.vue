@@ -1,10 +1,10 @@
 <template>
-    <div>
-        <section class="blog-banner">
-        <div class="intro">
-            <h2 class="intro__title">Articles & News</h2>
-            <p class="intro__breadcrumps"><a>Home</a> / <a>Blog</a></p>
-        </div>
+  <div>
+    <section class="blog-banner">
+      <div class="intro">
+        <h2 class="intro__title">Articles & News</h2>
+        <p class="intro__breadcrumps"><a>Home</a> / <a>Blog</a></p>
+      </div>
     </section>
     <section class="post center">
         <h3 class="post_title">Latest Post</h3>

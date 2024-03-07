@@ -3,7 +3,8 @@
     <HeaderComp/>
     <!-- <MainPageComp/> -->
     <!-- <BlogComp/> -->
-    <DetailsComp/>
+    <!-- <DetailsComp/> -->
+    <CategoriesComp />
     <FooterComp/>
 
   </div>
@@ -12,18 +13,22 @@
 <script>
 import HeaderComp from './components/HeaderComp.vue';
 // import MainPageComp from './components/MainPageComp.vue';
+import CategoriesComp from './components/CategoriesComp.vue';
 import FooterComp from './components/FooterComp.vue';
 // import BlogComp from './components/BlogComp.vue';
-import DetailsComp from './components/DetailsComp.vue'
+// import DetailsComp from './components/DetailsComp.vue'
+
 
 export default {
   name: 'App',
   components: {
     HeaderComp,
-    // MainPageComp, 
+    // MainPageComp,
+    CategoriesComp,
     FooterComp,
     // BlogComp,
-    DetailsComp
+    // DetailsComp,
+    
 }
 }
 </script>
