@@ -1,10 +1,17 @@
 <template>
-    <div class="categories_container center">
+    <div>
+        <section class="categories-banner">
+            <div class="intro_categories">
+            <h2 class="intro__title">Our Project</h2>
+            <p class="intro__breadcrumps"><router-link to="home" class="intro__breadcrumps">Home</router-link> / <router-link to="categories" class="intro__breadcrumps">Project</router-link></p>
+            </div>
+        </section>
+        <div class="categories_container center">
         <div class="categorie_btns" >
             <button @click="addTagToFilter(categorie)" v-for="categorie in categories" :key="categorie.id" class="categorie_btn">{{ categorie }}</button>
         </div>
-      <section class="progectbox" >
-        <div class="progectbox_card" :progect="progect" v-for="progect in filteredArticles" :key="progect.id">
+      <section class="progectbox center" >
+        <div class="progectbox_card" :progect="progect" v-for="progect in paginatedProgects" :key="progect.id">
             <img class="progectbox_card_img" :src='progect.src' alt="picture">
             <div class="progectbox_card_bottom">
               <div class="progectbox_card_bottom_left">
@@ -24,27 +31,29 @@
         </router-link>
       </div>
     </div>
+    </div>
   </template>
   
   <script>
-   
+  
   
   export default {
-    name: 'CategoriesComp',
-  
+    name: 'CategoriesPage',
     data() {
       return {
         progects: [
-          {title: 'Minimal Bedroom', path: 'Decor / Kitchen', tags: ['Decor', 'Bathroom', 'Kitchen'], src: require("../assets/img/categories1.png")},
+          {title: 'Minimal Bedroom', path: 'Decor / Kitchen', tags: ['Decor', 'Bathroom', 'Kitchen'], src: require("../assets/img/categories3.png")},
           {title: 'Minimal Bedroom', path: 'Decor / Living area', tags: ['Decor', 'Bathroom', 'Living area'], src: require("../assets/img/categories2.png")},
-          {title: 'Classic Minimal Bedroom', path: 'Decor / Bedroom', tags: ['Decor', 'Bathroom'], src: require("../assets/img/categories3.png")},
+          {title: 'Classic Minimal Bedroom', path: 'Decor / Bedroom', tags: ['Decor', 'Bathroom'], src: require("../assets/img/categories2.png")},
           {title: 'Modern Bedroom', path: 'Decor / Living area', tags: ['Decor', 'Bathroom', 'Living area'], src: require("../assets/img/categories3.png")},
-          {title: 'Minimal Bedroom Table', path: 'Decor / Bedroom', tags: ['Decor', 'Bathroom', 'Bedroom'], src: require("../assets/img/categories4.png")},
+          {title: 'Minimal Bedroom Table', path: 'Decor / Bedroom', tags: ['Decor', 'Bathroom', 'Bedroom'], src: require("../assets/img/categories2.png")},
           {title: 'System Table', path: 'Decor / Bedroom', tags: ['Decor', 'Bathroom', 'Bedroom'], src: require("../assets/img/categories5.png")},
           {title: 'Modern Bedroom', path: 'Decor / Bedroom', tags: ['Decor', 'Bathroom', 'Bedroom'], src: require("../assets/img/categories6.png")},
           {title: 'Modern Bedroom', path: 'Decor / Bedroom', tags: ['Decor', 'Bathroom', 'Bedroom'], src: require("../assets/img/categories7.png")},
-          {title: 'Minimal Bedroom Table', path: 'Decor / Bedroom', tags: ['Decor', 'Bedroom'], src: require("../assets/img/categories4.png")},
+          {title: 'Minimal Bedroom Table', path: 'Decor / Bedroom', tags: ['Decor', 'Bedroom'], src: require("../assets/img/categories2.png")},
           {title: 'System Table', path: 'Decor / Bedroom', tags: ['Decor', 'Bedroom'], src: require("../assets/img/categories5.png")},
+          {title: 'Modern Bedroom', path: 'Decor / Bedroom', tags: ['Decor', 'Bedroom'], src: require("../assets/img/categories6.png")},
+          {title: 'Modern Bedroom', path: 'Decor / Bedroom', tags: ['Decor', 'Kitchen', 'Bedroom'], src: require("../assets/img/categories7.png")},
           {title: 'Modern Bedroom', path: 'Decor / Bedroom', tags: ['Decor', 'Bedroom'], src: require("../assets/img/categories6.png")},
           {title: 'Modern Bedroom', path: 'Decor / Bedroom', tags: ['Decor', 'Bedroom'], src: require("../assets/img/categories7.png")}
         ],
@@ -72,9 +81,13 @@
       },  
       computed: {
         filteredArticles() {
-          return this.progects.filter(progect =>
-            progect.tags.some(tag => this.selectedTags.includes(tag))
-          );
+          if (this.selectedTags.length === 0 ){
+            return this.progects;
+          } else {
+            return this.progects.filter(progect =>
+              progect.tags.some(tag => this.selectedTags.includes(tag))
+            )
+          }
         },
         totalPages() {
           return Math.ceil(this.filteredArticles.length / this.itemsPerPage);
@@ -86,13 +99,46 @@
           return this.filteredArticles.slice(startIndex, endIndex); 
         }
       },
-      created() {
-        this.selectedTags.push(this.categories[0]);
-      },
   };
   </script>
   <style>
-  .categories_container{
+    .categories-banner{
+      background-color: #F4F0EC;
+      height: 353px;
+    }
+    .intro_categories{
+        padding: 41px 78px;
+        border-radius: 37px 37px 0px 0px;
+        background: #FFF;
+        position: absolute;
+        top: 318px;
+        left: calc((100vw - 427px) / 2);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .intro__title {
+        color: #292F36;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        -webkit-text-stroke-width: 1;
+        -webkit-text-stroke-color: #000;
+        font-size: 50px;
+        font-family: "DM Serif Display", serif;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 125%;
+    }
+    .intro__breadcrumps {
+        color: #4D5053;
+        font-family: "Jost", sans-serif;
+        font-style: normal;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: 0.22px;
+    }
+    .categories_container{
     padding-top: 20vh;
     padding-bottom: 20vh;
     display: flex;
@@ -104,7 +150,7 @@
     justify-content: center;
     align-items: center;
     border: 1px solid #CDA274;
-    border-radius: 18px;
+    border-radius: 19px;
     margin-bottom: 50px;
   }
   .categorie_btn{
@@ -137,15 +183,17 @@
   .progectbox{
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    justify-content: space-between;
+    row-gap: 37px;
+    column-gap: 30px;
+    columns: 2;
   }
   .progectbox_card{
     display: flex;
     flex-direction: column;
-    width: 44vw;
   }
   .progectbox_card_img{
-    max-width: 100%;
+    width: 100%;
   }
   .progectbox_card_bottom{
     display: flex;
@@ -179,6 +227,7 @@
     scale: 1.1;
   }
   .pagination{
+    padding-top: 61px;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -200,7 +249,5 @@
     background-color: #F4F0EC;
     border: none;
   }
-  
+
   </style>
-
-

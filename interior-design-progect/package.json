@@ -8,10 +8,15 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@egjs/vue-flicking": "^4.11.2",
+    "bootstrap": "^5.3.3",
     "core-js": "^3.8.3",
     "sass": "^1.71.1",
     "sass-loader": "^14.1.1",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "vue-marquee-slider": "^1.0.6",
+    "vue-router": "^2.8.1",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

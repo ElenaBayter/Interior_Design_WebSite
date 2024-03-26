@@ -9,7 +9,7 @@
                 <div class="content__date">
                     <p class="content__date_text"></p>
                     <div class="content__breadcrumps">
-                        <a class="content__date_text" href="#">Interior / </a><a class="content__date_text" href="#">Home /</a><a class="content__date_text"  href="#"> Decore</a>
+                        <router-link to="home"  class="content__date_text">Interior /</router-link><router-link to="home" class="content__date_text">Home /</router-link><router-link to="blog" class="content__date_text">Decore</router-link>
                     </div>
                 </div>
                 <p class="content__desc">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injecthumour, or randomised words which don't look even slightly believable.</p>
@@ -28,27 +28,29 @@
                 </ol>
                 <img class="content__img" src="../assets/img/content2.png" alt="content photo">
                 <p class="content__desc">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary to popular belief.There are many variations of passages of Lorem Ipsum available, but the majority have suffered.</p>
-                <div id="root" class="blog__content">
+                
+            </div>
+            
+            <div class="tegs">
+                <h4 class="tegs__title">Tags</h4>
+                <button class="tegs__item" v-for="tag in tags" :key="tag" @click="addTagToFilter(tag)" href="">{{ tag }}</button>
+            </div>
+        </section> 
+        <div id="root" class="blog__content">
                 <div v-for="article in filteredArticles" :key="article.id">
                     <div class="blogcard">
                         <img class="blogcard__img" :src='article.src' alt="article">
                         <h4 class="blogcard__title">{{ article.title }}</h4>
                         <div class="blogcard__bottom">
                             <p class="blogcard__bottom_date">{{article.date}} </p>
-                            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
+                            <a href="#"><svg class="link_hover" xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
                                 <circle class="link" cx="26" cy="26.267" r="26" fill="#F4F0EC"/>
                                 <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg></a>
                         </div>
                     </div>
                 </div>
-                </div>
-            </div>
-            <div class="tegs">
-                <h4 class="tegs__title">Tags</h4>
-                <button class="tegs__item" v-for="tag in tags" :key="tag" @click="addTagToFilter(tag)" href="">{{ tag }}</button>
-            </div>
-        </section> 
+              </div>
     </div>
 </template>
 
@@ -263,7 +265,7 @@ ol {
   color: #292F36;
   font-family: "DM Serif Display", serif;
   font-style: normal;
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 400;
   line-height: 125%;
   letter-spacing: 0.5px;
@@ -299,5 +301,8 @@ ol {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 27px;
+}
+.link_hover:hover{
+  scale: 1.1;
 }
 </style>

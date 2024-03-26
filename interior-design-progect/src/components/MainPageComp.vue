@@ -5,9 +5,9 @@
             <div class="banner__contentbox">
                 <h2 class="banner__contentbox_title">Let Your Home <br>Be Unique</h2>
                 <p class="banner__contentbox_desc">There are many variations of the passages of lorem Ipsum fromavailable, majority.</p>
-                <button class="banner__contentbox_btn">Get Started<svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
+                <router-link to="progect" class="banner__contentbox_btn">Get Started<svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17" fill="none">
                 <path d="M1 8.43542L14.7232 8.29857M9.61818 1.91138L16.1412 8.43436L9.48677 15.0887" stroke="#CDA274" stroke-width="2" stroke-linecap="square" stroke-linejoin="round"/>
-                </svg></button>
+                </svg></router-link>
 
             </div>
         </div>
@@ -25,10 +25,10 @@
                         <h4 class="progectcard__bottom_title">Modern Kitchan</h4>
                         <p class="progectcard__bottom_desc">Decor / Artchitecture</p>
                     </div>
-                    <a class="progectcard__bottom_link" href="#"><svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                    <router-link to="details" class="progectcard__bottom_link" href="#"><svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
                         <circle cx="35" cy="35" r="35" fill="#F4F0EC"/>
                         <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg></a>
+                        </svg></router-link>
                 </div>
             </div>
             <div class="progectcard">
@@ -38,10 +38,10 @@
                         <h4 class="progectcard__bottom_title">Modern Kitchan</h4>
                         <p class="progectcard__bottom_desc">Decor / Artchitecture</p>
                     </div>
-                    <a class="progectcard__bottom_link" href="#"><svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                    <router-link to="details" class="progectcard__bottom_link" href="#"><svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
                         <circle cx="35" cy="35" r="35" fill="#F4F0EC"/>
                         <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg></a>
+                        </svg></router-link>
                 </div>
             </div>
             <div class="progectcard">
@@ -51,10 +51,10 @@
                         <h4 class="progectcard__bottom_title">Modern Kitchan</h4>
                         <p class="progectcard__bottom_desc">Decor / Artchitecture</p>
                     </div>
-                    <a class="progectcard__bottom_link" href="#"><svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                    <router-link to="details" class="progectcard__bottom_link" href="#"><svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
                         <circle cx="35" cy="35" r="35" fill="#F4F0EC"/>
                         <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg></a>
+                        </svg></router-link>
                 </div>
             </div>
             <div class="progectcard">
@@ -64,10 +64,10 @@
                         <h4 class="progectcard__bottom_title">Modern Kitchan</h4>
                         <p class="progectcard__bottom_desc">Decor / Artchitecture</p>
                     </div>
-                    <a class="progectcard__bottom_link" href="#"><svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
+                    <router-link to="details" class="progectcard__bottom_link" href="#"><svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 70 70" fill="none">
                         <circle cx="35" cy="35" r="35" fill="#F4F0EC"/>
                         <path d="M32 44L40 35L32 26" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg></a>
+                        </svg></router-link>
                 </div>
             </div>
         </div>
@@ -106,10 +106,10 @@
                 <h4 class="blogcard__title">Let’s Get Solution For Building Construction Work</h4>
                 <div class="blogcard__bottom">
                     <p class="blogcard__bottom_date">26 December,2022 </p>
-                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
+                    <router-link to="categories"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
                         <circle class="link" cx="26" cy="26.267" r="26" fill="#F4F0EC"/>
                         <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg></a>
+                        </svg></router-link>
                 </div>
             </div>
             <div class="blogcard">
@@ -117,10 +117,10 @@
                 <h4 class="blogcard__title">Low Cost Latest Invented Interior Designing Ideas.</h4>
                 <div class="blogcard__bottom">
                     <p class="blogcard__bottom_date">22 December,2022 </p>
-                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
+                    <router-link to="categories"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
                         <circle  class="link" cx="26" cy="26.267" r="26" fill="#F4F0EC"/>
                         <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg></a>
+                        </svg></router-link>
                 </div>
             </div>
             <div class="blogcard">
@@ -128,10 +128,10 @@
                 <h4 class="blogcard__title">Best For Any Office & Business Interior Solution</h4>
                 <div class="blogcard__bottom">
                     <p class="blogcard__bottom_date">25 December,2022 </p>
-                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
+                    <router-link to="categories"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
                         <circle class="link" cx="26" cy="26.267" r="26" fill="#F4F0EC"/>
                         <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg></a>
+                        </svg></router-link>
                 </div>
             </div>
         </div>
@@ -151,7 +151,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 * {
   margin: 0;
   padding: 0;
@@ -216,6 +216,7 @@ a {
 }
 .banner__contentbox_btn:hover {
   scale: 1.02;
+  transition: all 0.3s;
 }
 
 .progects {
@@ -414,6 +415,7 @@ a {
 
 .blogcard:hover .link {
   fill: #FFF;
+  transition: all 0.5s;
 }
 
 </style>

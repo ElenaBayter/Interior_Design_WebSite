@@ -3,7 +3,7 @@
     <section class="blog-banner">
       <div class="intro">
         <h2 class="intro__title">Articles & News</h2>
-        <p class="intro__breadcrumps"><a>Home</a> / <a>Blog</a></p>
+        <p class="intro__breadcrumps"><router-link to="home" class="intro__breadcrumps">Home</router-link> / <router-link to="blog" class="intro__breadcrumps">Blog</router-link></p>
       </div>
     </section>
     <section class="post center">
@@ -16,10 +16,10 @@
                 <p class="postbox__texts_desc">Lorem Ipsum is not simply random text. It has roots in a piece of classica.</p>
                 <div class="date-link">
                     <p class="date">26 December,2022</p>
-                    <a href="#"><svg class="date-link_link" xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
+                    <router-link to="details"><svg class="date-link_link" xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
                         <circle cx="26" cy="26.5" r="26" fill="#F4F0EC"/>
                         <path d="M23.771 33.1855L29.7139 26.4998L23.771 19.8141" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg></a>
+                        </svg></router-link>
                 </div>
             </div>
         </div>
@@ -33,10 +33,10 @@
                     <h4 class="blogcard__title">{{ article.title}}</h4>
                     <div class="blogcard__bottom">
                         <p class="blogcard__bottom_date">{{article.date}} </p>
-                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
+                        <router-link to="/details"><svg xmlns="http://www.w3.org/2000/svg" width="52" height="53" viewBox="0 0 52 53" fill="none">
                             <circle class="link" cx="26" cy="26.267" r="26" fill="#F4F0EC"/>
                             <path d="M23.7714 32.9527L29.7143 26.267L23.7714 19.5813" stroke="#292F36" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg></a>
+                            </svg></router-link>
                     </div>
                 </div>
             </div>
@@ -77,7 +77,7 @@ export default {
   background: #FFF;
   position: absolute;
   top: 318px;
-  left: calc((100vw - 503px) / 2);
+  left: calc((100vw - 518px) / 2);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -222,7 +222,7 @@ export default {
   color: #292F36;
   font-family: "DM Serif Display", serif;
   font-style: normal;
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 400;
   line-height: 125%;
   letter-spacing: 0.5px;
